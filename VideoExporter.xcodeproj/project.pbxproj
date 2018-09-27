@@ -12,6 +12,10 @@
 		0410F1EF215D5543009144E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1ED215D5543009144E7 /* Main.storyboard */; };
 		0410F1F1215D5544009144E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1F0215D5544009144E7 /* Assets.xcassets */; };
 		0410F1F4215D5544009144E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1F2215D5544009144E7 /* LaunchScreen.storyboard */; };
+		0410F1FC215D562B009144E7 /* Kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FB215D562B009144E7 /* Kitten.jpg */; };
+		0410F1FE215D6569009144E7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FD215D6569009144E7 /* lottie.json */; };
+		0410F200215D77AF009144E7 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FF215D77AF009144E7 /* Background.jpg */; };
+		73EAF1BB1E0F648E305F668E /* Pods_VideoExporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		0410F1F0215D5544009144E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0410F1F3215D5544009144E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0410F1F5215D5544009144E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0410F1FB215D562B009144E7 /* Kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kitten.jpg; sourceTree = "<group>"; };
+		0410F1FD215D6569009144E7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
+		0410F1FF215D77AF009144E7 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
+		2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoExporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43815A936B3AD586041EEF31 /* Pods-VideoExporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D86512BA722D903F7DC73C /* Pods-VideoExporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73EAF1BB1E0F648E305F668E /* Pods_VideoExporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				0410F1E8215D5543009144E7 /* VideoExporter */,
 				0410F1E7215D5543009144E7 /* Products */,
+				52B1DEFC38BD4780EEFAE404 /* Pods */,
+				56243EE55E44817BE3E4DBFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,34 @@
 		0410F1E8215D5543009144E7 /* VideoExporter */ = {
 			isa = PBXGroup;
 			children = (
+				0410F1FF215D77AF009144E7 /* Background.jpg */,
+				0410F1FD215D6569009144E7 /* lottie.json */,
 				0410F1E9215D5543009144E7 /* AppDelegate.swift */,
 				0410F1EB215D5543009144E7 /* ViewController.swift */,
 				0410F1ED215D5543009144E7 /* Main.storyboard */,
+				0410F1FB215D562B009144E7 /* Kitten.jpg */,
 				0410F1F0215D5544009144E7 /* Assets.xcassets */,
 				0410F1F2215D5544009144E7 /* LaunchScreen.storyboard */,
 				0410F1F5215D5544009144E7 /* Info.plist */,
 			);
 			path = VideoExporter;
+			sourceTree = "<group>";
+		};
+		52B1DEFC38BD4780EEFAE404 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43815A936B3AD586041EEF31 /* Pods-VideoExporter.debug.xcconfig */,
+				B4D86512BA722D903F7DC73C /* Pods-VideoExporter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		56243EE55E44817BE3E4DBFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0410F1F8215D5544009144E7 /* Build configuration list for PBXNativeTarget "VideoExporter" */;
 			buildPhases = (
+				6B4881747DF27BEF4DAE867F /* [CP] Check Pods Manifest.lock */,
 				0410F1E2215D5543009144E7 /* Sources */,
 				0410F1E3215D5543009144E7 /* Frameworks */,
 				0410F1E4215D5543009144E7 /* Resources */,
+				0CD9BCBCD82D2A698803D943 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,13 +157,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0410F1FE215D6569009144E7 /* lottie.json in Resources */,
+				0410F1FC215D562B009144E7 /* Kitten.jpg in Resources */,
 				0410F1F4215D5544009144E7 /* LaunchScreen.storyboard in Resources */,
 				0410F1F1215D5544009144E7 /* Assets.xcassets in Resources */,
 				0410F1EF215D5543009144E7 /* Main.storyboard in Resources */,
+				0410F200215D77AF009144E7 /* Background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD9BCBCD82D2A698803D943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Spitfire/Spitfire.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spitfire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B4881747DF27BEF4DAE867F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VideoExporter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0410F1E2215D5543009144E7 /* Sources */ = {
@@ -278,6 +357,7 @@
 		};
 		0410F1F9215D5544009144E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43815A936B3AD586041EEF31 /* Pods-VideoExporter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,13 +369,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zigi.VideoExporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		0410F1FA215D5544009144E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D86512BA722D903F7DC73C /* Pods-VideoExporter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zigi.VideoExporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (2.5.0)
+  - Spitfire (1.0.1)
+
+DEPENDENCIES:
+  - lottie-ios
+  - Spitfire
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
+    - Spitfire
+
+SPEC CHECKSUMS:
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  Spitfire: b86f61d8963f00690dba5895ee09b30dd1bd7bca
+
+PODFILE CHECKSUM: d5d6cb483d20427000266c9a68bd32bfbdc6876b
+
+COCOAPODS: 1.5.3
