@@ -15,6 +15,9 @@
 		0410F1FC215D562B009144E7 /* Kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FB215D562B009144E7 /* Kitten.jpg */; };
 		0410F1FE215D6569009144E7 /* lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FD215D6569009144E7 /* lottie.json */; };
 		0410F200215D77AF009144E7 /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0410F1FF215D77AF009144E7 /* Background.jpg */; };
+		0478A0ED221CD07F00FF26B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EA221CD07C00FF26B6 /* Errors.swift */; };
+		0478A0EE221CD07F00FF26B6 /* PixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */; };
+		0478A0EF221CD07F00FF26B6 /* Spitfire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EC221CD07F00FF26B6 /* Spitfire.swift */; };
 		73EAF1BB1E0F648E305F668E /* Pods_VideoExporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		0410F1FB215D562B009144E7 /* Kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kitten.jpg; sourceTree = "<group>"; };
 		0410F1FD215D6569009144E7 /* lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie.json; sourceTree = "<group>"; };
 		0410F1FF215D77AF009144E7 /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
+		0478A0EA221CD07C00FF26B6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBuffer.swift; sourceTree = "<group>"; };
+		0478A0EC221CD07F00FF26B6 /* Spitfire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spitfire.swift; sourceTree = "<group>"; };
 		2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoExporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43815A936B3AD586041EEF31 /* Pods-VideoExporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D86512BA722D903F7DC73C /* Pods-VideoExporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +73,9 @@
 		0410F1E8215D5543009144E7 /* VideoExporter */ = {
 			isa = PBXGroup;
 			children = (
+				0478A0EA221CD07C00FF26B6 /* Errors.swift */,
+				0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */,
+				0478A0EC221CD07F00FF26B6 /* Spitfire.swift */,
 				0410F1FF215D77AF009144E7 /* Background.jpg */,
 				0410F1FD215D6569009144E7 /* lottie.json */,
 				0410F1E9215D5543009144E7 /* AppDelegate.swift */,
@@ -175,18 +184,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Spitfire/Spitfire.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spitfire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoExporter/Pods-VideoExporter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6B4881747DF27BEF4DAE867F /* [CP] Check Pods Manifest.lock */ = {
@@ -214,7 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0478A0EF221CD07F00FF26B6 /* Spitfire.swift in Sources */,
+				0478A0EE221CD07F00FF26B6 /* PixelBuffer.swift in Sources */,
 				0410F1EC215D5543009144E7 /* ViewController.swift in Sources */,
+				0478A0ED221CD07F00FF26B6 /* Errors.swift in Sources */,
 				0410F1EA215D5543009144E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

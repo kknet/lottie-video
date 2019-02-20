@@ -8,7 +8,6 @@
 
 import UIKit
 import Lottie
-import Spitfire
 import Photos
 
 //extension UIImage {

@@ -7,5 +7,5 @@ target 'VideoExporter' do
 
   # Pods for VideoExporter
   pod 'lottie-ios'
-  pod 'Spitfire'
+  # pod 'Spitfire'
 end
