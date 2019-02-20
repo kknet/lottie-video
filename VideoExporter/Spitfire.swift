@@ -45,7 +45,7 @@ public class Spitfire {
 //            throw(SpitfireError.ImageDimensionsMultiplierFailure(message))
 //        }
         
-        let size = lottieView.frame.size
+        let size = CGSize(width: 768, height: 768)
         
         let fps = 20
         let framesMax = lottieView.animationDuration * CGFloat(fps)
@@ -109,8 +109,10 @@ public class Spitfire {
                           
                             lottieView.animationProgress = CGFloat(frameCount) / framesMax
                             
-                            UIGraphicsBeginImageContextWithOptions(containerView.bounds.size, containerView.isOpaque, 0.0)
-                            containerView.drawHierarchy(in: containerView.bounds, afterScreenUpdates: false)
+                            
+                            UIGraphicsBeginImageContextWithOptions(size, containerView.isOpaque, 0.0)
+                            let q = containerView.bounds.size
+                            containerView.drawHierarchy(in: CGRect(x:0, y:0, width: 768, height: 768), afterScreenUpdates: false)
                             let image = UIGraphicsGetImageFromCurrentImageContext()
                             UIGraphicsEndImageContext()
                             

@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     
     @IBAction func startRecording(_ sender: Any) {
         
-        let foo = UIImage(named: "Kitten.jpg")
+        let foo = UIImage(named: "input_img.png")
         imgView.image = foo
         
         lottieView = LOTAnimationView(name: "lottie")
@@ -101,38 +101,74 @@ class ViewController: UIViewController {
                 let percent = (progress.fractionCompleted * 100).roundTo(places: 2)
                 print("\(percent)%")
             }, success: { (url) in
-                PHPhotoLibrary.shared().performChanges({
-                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-                }) { saved, error in
-                    if saved {
-                        let alertController = UIAlertController(title: NSLocalizedString("Your video was saved", comment: ""), message: nil, preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
-                        alertController.addAction(defaultAction)
-                        self.present(alertController, animated: true, completion: nil)
+                
+                self.merge(url: url, completion: { (exporter) in
+                    print(exporter.outputURL!)
+                    
+                    PHPhotoLibrary.shared().performChanges({
+                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: exporter.outputURL!)
+                    }) { saved, error in
+                        if saved {
+                            let alertController = UIAlertController(title: NSLocalizedString("Your video was saved", comment: ""), message: nil, preferredStyle: .alert)
+                            let defaultAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil)
+                            alertController.addAction(defaultAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        }
                     }
-                }
+                })
+                
+               
             })
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func merge(url: URL, completion:@escaping (_ exporter: AVAssetExportSession) -> ()) -> Void {
         
-//        var framesCount = 0.0;
+        let video = AVAsset(url: url)
+        let mainComposition = AVMutableComposition()
+        
+        
+        let compositionVideoTrack = mainComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
+        var insertTime = kCMTimeZero
+        
+        try! compositionVideoTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, video.duration), of: video.tracks[0], at: insertTime)
+        insertTime = CMTimeAdd(insertTime, video.duration)
+        
+        try! compositionVideoTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, video.duration), of: video.tracks[0], at: insertTime)
+        insertTime = CMTimeAdd(insertTime, video.duration)
+        
+        try! compositionVideoTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, video.duration), of: video.tracks[0], at: insertTime)
+        insertTime = CMTimeAdd(insertTime, video.duration)
+        
+        
+//        let compositionVideoTrack = mainComposition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
+        //compositionVideoTrack?.preferredTransform = CGAffineTransform(rotationAngle: .pi / 2)
+        
+//        var insertTime = kCMTimeZero
 //
-//        var framesMax = Double((lottieView?.animationDuration)!) * FPS
-//
-//        var images = [UIImage]()
-//
-//        timer = Timer.scheduledTimer(withTimeInterval: 1 / FPS, repeats: true, block: {(timer:Timer) -> Void in
-//            framesCount += 1
-//
-//            let frame = UIImage(view: self.containerView)
-//            self.previewView.image = frame
-//            images.append(frame)
-//            if framesCount > framesMax {
-//                timer.invalidate()
-//                self.buildVideo(images: images)
-//            }
-//        })
+//        for videoAsset in arrayVideos {
+//            try! compositionVideoTrack?.insertTimeRange(CMTimeRangeMake(kCMTimeZero, videoAsset.duration), of: videoAsset.tracks(withMediaType: .video)[0], at: insertTime)
+//            insertTime = CMTimeAdd(insertTime, videoAsset.duration)
+//        }
+        
+        let outputFileURL = URL(fileURLWithPath: NSTemporaryDirectory() + "result.mp4")
+        
+        try? FileManager.default.removeItem(at: outputFileURL)
+        //fileManager.removeItemIfExisted(outputFileURL)
+        
+        let exporter = AVAssetExportSession(asset: mainComposition, presetName: AVAssetExportPresetHighestQuality)
+        
+        exporter?.outputURL = outputFileURL
+        exporter?.outputFileType = AVFileTypeMPEG4
+        exporter?.shouldOptimizeForNetworkUse = true
+        
+        exporter?.exportAsynchronously {
+            DispatchQueue.main.async {
+                completion(exporter!)
+            }
+        }
     }
     
 }

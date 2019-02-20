@@ -18,6 +18,7 @@
 		0478A0ED221CD07F00FF26B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EA221CD07C00FF26B6 /* Errors.swift */; };
 		0478A0EE221CD07F00FF26B6 /* PixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */; };
 		0478A0EF221CD07F00FF26B6 /* Spitfire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A0EC221CD07F00FF26B6 /* Spitfire.swift */; };
+		0478A0F1221CE4A500FF26B6 /* input_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 0478A0F0221CE4A500FF26B6 /* input_img.png */; };
 		73EAF1BB1E0F648E305F668E /* Pods_VideoExporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		0478A0EA221CD07C00FF26B6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBuffer.swift; sourceTree = "<group>"; };
 		0478A0EC221CD07F00FF26B6 /* Spitfire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spitfire.swift; sourceTree = "<group>"; };
+		0478A0F0221CE4A500FF26B6 /* input_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_img.png; path = ../../../Documents/Starified/input_img.png; sourceTree = "<group>"; };
 		2A0C5DCCA1500D59BF3D41C6 /* Pods_VideoExporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoExporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43815A936B3AD586041EEF31 /* Pods-VideoExporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D86512BA722D903F7DC73C /* Pods-VideoExporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoExporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoExporter/Pods-VideoExporter.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		0410F1E8215D5543009144E7 /* VideoExporter */ = {
 			isa = PBXGroup;
 			children = (
+				0478A0F0221CE4A500FF26B6 /* input_img.png */,
 				0478A0EA221CD07C00FF26B6 /* Errors.swift */,
 				0478A0EB221CD07E00FF26B6 /* PixelBuffer.swift */,
 				0478A0EC221CD07F00FF26B6 /* Spitfire.swift */,
@@ -169,6 +172,7 @@
 				0410F1FE215D6569009144E7 /* lottie.json in Resources */,
 				0410F1FC215D562B009144E7 /* Kitten.jpg in Resources */,
 				0410F1F4215D5544009144E7 /* LaunchScreen.storyboard in Resources */,
+				0478A0F1221CE4A500FF26B6 /* input_img.png in Resources */,
 				0410F1F1215D5544009144E7 /* Assets.xcassets in Resources */,
 				0410F1EF215D5543009144E7 /* Main.storyboard in Resources */,
 				0410F200215D77AF009144E7 /* Background.jpg in Resources */,
