@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoExporter/ViewController.swift"
-            timestampString = "572313831.415428"
+            timestampString = "572317281.239956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -25,61 +25,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoExporter/ViewController.swift"
-            timestampString = "572313831.415996"
+            filePath = "VideoExporter/Spitfire.swift"
+            timestampString = "572317281.2400579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "buildVideo(images:)"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "makeVideo(with:containerView:progress:success:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "VideoExporter.ViewController.buildVideo(images: Swift.Array&lt;__ObjC.UIImage&gt;) -&gt; ()"
-                  moduleName = "VideoExporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zigi/Temp/VideoExporter/VideoExporter/ViewController.swift"
-                  timestampString = "559773260.675673"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.Progress) -&gt; () in VideoExporter.ViewController.buildVideo(images: Swift.Array&lt;__ObjC.UIImage&gt;) -&gt; ()"
-                  moduleName = "VideoExporter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zigi/Temp/VideoExporter/VideoExporter/ViewController.swift"
-                  timestampString = "559773260.6788909"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "15">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoExporter/ViewController.swift"
-            timestampString = "572313831.416057"
+            filePath = "VideoExporter/Spitfire.swift"
+            timestampString = "572317281.240537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "buildVideo(images:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "makeVideo(with:containerView:progress:success:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

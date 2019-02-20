@@ -91,44 +91,13 @@ class ViewController: UIViewController {
         
         containerView.addSubview(lottieView!)
         
-        lottieView?.loopAnimation = true
-        lottieView?.play()
+        lottieView?.loopAnimation = false
+        lottieView?.stop()
+        lottieView?.animationProgress = 0
+//        lottieView?.play()
         
-        var framesCount = 0.0;
-        
-        var framesMax = Double((lottieView?.animationDuration)!) * FPS
-        
-        var images = [UIImage]()
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 1 / FPS, repeats: true, block: {(timer:Timer) -> Void in
-            framesCount += 1
-            
-            let frame = UIImage(view: self.containerView)
-            self.previewView.image = frame
-            images.append(frame)
-            if framesCount > framesMax {
-                timer.invalidate()
-                self.buildVideo(images: images)
-            }
-        })
-        
-        //let prevew = UIImage(view: containerView)
-        //previewView.image = prevew
-        
-//        var images = [UIImage]()
-//        for _ in 0..<120 {
-//            let image = UIImage(named: "Kitten.jpg")
-//            images.append(image!)
-//        }
-//
-//        buildVideo(images:images)
-    }
-    
-    
-    
-    func buildVideo(images:[UIImage]) -> Void {
         do {
-            try spitfire.makeVideo(with: images, fps: Int32(FPS), progress: { (progress) in
+            try spitfire.makeVideo(with: lottieView!, containerView: containerView, progress: { (progress) in
                 let percent = (progress.fractionCompleted * 100).roundTo(places: 2)
                 print("\(percent)%")
             }, success: { (url) in
@@ -146,6 +115,25 @@ class ViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+        
+//        var framesCount = 0.0;
+//
+//        var framesMax = Double((lottieView?.animationDuration)!) * FPS
+//
+//        var images = [UIImage]()
+//
+//        timer = Timer.scheduledTimer(withTimeInterval: 1 / FPS, repeats: true, block: {(timer:Timer) -> Void in
+//            framesCount += 1
+//
+//            let frame = UIImage(view: self.containerView)
+//            self.previewView.image = frame
+//            images.append(frame)
+//            if framesCount > framesMax {
+//                timer.invalidate()
+//                self.buildVideo(images: images)
+//            }
+//        })
     }
+    
 }
 
